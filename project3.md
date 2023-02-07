@@ -77,3 +77,27 @@
 
 ### Update the api.js code in routes directory
 ![api codeupdt](/images/api-update.PNG)
+
+
+## MONGODB DATABASE
+### MongoDB will be made use of in this app as its a NoSQL db.  First, sign up to set up an account and then create a db. Then, a url connection string to connect to the app will be generated with already created username, password and db name set for the database created.
+
+### Create an env file in the ToDo directory and then insert db connection details
+`touch env`
+`vi .env`
+
+`DB = 'mongodb+srv://<username>:<password>@<network-address>/<dbname>?retryWrites=true&w=majority'`
+
+### Next is to update the index.js file to use the environment variable created so as to connect to the db
+![index upd](/images/index-update.PNG)
+
+### start server
+`node index.js`
+![db conn](/images/db-conn.PNG)
+
+## Test the backend code using RestAPI
+### Postman application is used to implemnent the endpoint tests
+![api test1](/images/api-getReq.PNG)
+![api test2](/images/api-delete.PNG)
+
+
