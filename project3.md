@@ -101,3 +101,57 @@
 ![api test2](/images/api-delete.PNG)
 
 
+# STEP 2 - FRONT END 
+### Use creat-react-app to scaffold the app with the client folder created
+` npx create-react-app client`
+
+### Running the app, install the following:
+`npm install concurrently --save-dev`
+`npm install nodemon --save-dev`
+
+### update the package.json file scripts so as to be able to use the concurrently package installed
+
+
+`"scripts": {`
+`"start": "node index.js",`
+`"start-watch": "nodemon index.js",`
+`"dev": "concurrently \"npm run start-watch\" ``\"cd client && npm start\""`
+`}`
+
+### Change directory to client folder and update the package.json file with a proxy url config.
+`"proxy": "http://localhost:5000"`
+### This is to be able to run the backend and the front end at the same time. To make this happen, run this command: npm run dev
+### NB: Port 3000 needs to be opened on the EC2 instance since the app is running on the port
+![npm run](/images/npm-rundev.PNG)
+![npm run](/images/frontend.PNG)
+
+### Next, create components folder in the src directory and create 3 files: Input.js, ListTodo.js and Todo.js and paste code into the files respectively.
+![todoList](/images/todoList-code.PNG)
+
+![todo](/images/todo-codee.PNG)
+
+
+### Install AXIOS which is HTTP client for browser and node
+`npm install axios `
+
+### Update the following files with code: app.js, app.css and index.css
+`vim app.js`
+`vim app.css`
+`vim index.css`
+
+![appjs code](/images/appjs-code.PNG)
+
+![appcss code](/images/appcss-code.PNG)
+
+![indexcss code](/images/indexcss-code.PNG)
+
+
+### Change directory to the Todo root folder and run the command:
+`npm run dev`
+
+![todoapp1](/images/todoapp-web.PNG)
+
+![todoapp2](/images/todoapp-webapp.PNG)
+
+
+## A ToDo application created and deployed to MERN stack with ReactJS for frontend and ExpressJS for backend.
