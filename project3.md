@@ -61,6 +61,19 @@
 ### create a file and ioen the file
 `touch api.js`
 `vim api.js`
-![npm init](/images/api-code.PNG)
+![api code](/images/api-code.PNG)
 
+## CREATE MODELS
+### Install Mongoose and create a folder for Models
+`npm install mongoose`
+`mkdir models`
 
+### Change directory to the Models folder and create a file in it
+`cd models` 
+`touch todo.js`
+
+### paste code 
+![mongoose code](/images/mongoose-code.PNG)
+
+### Update the api.js code in routes directory
+![api codeupdt](/images/api-update.PNG)
