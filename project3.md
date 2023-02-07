@@ -23,3 +23,44 @@
 `npm init`
 ![npm init](/images/npm-init.PNG)
 
+## - INSTALL EXPRESSJS
+`npm install express`
+
+### create a file 
+`touch index.js`
+
+### Install the dotenv module and open the index.js 
+`npm install dotenv`
+`vim index.js`
+
+### paste code inside 
+![npm init](/images/vim-index.PNG)
+
+### now enter ctrl+c and then :wq
+
+### Start server
+`node index.js`
+![npm init](/images/port5000.PNG)
+
+### Open port 5000 on the EC2 instance security group by editing the inbound rule and adding a custom TCP port 5000.
+
+### Open browser and access the server's public IP with the port 5000
+`http://<PublicIP-or-PublicDNS>:5000`
+![npm init](/images/express-web.PNG)
+
+### The following are the expected actions from the Todo app with each task associated with an enpoint (POST, GET, DELETE) method:
+### 1 Create a new task
+### 2 Display list of all tasks
+### 3 Delete a completed task
+
+
+## Create routes for each task
+`mkdir routes`
+`cd routes`
+
+### create a file and ioen the file
+`touch api.js`
+`vim api.js`
+![npm init](/images/api-code.PNG)
+
+
